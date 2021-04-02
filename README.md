@@ -1,24 +1,48 @@
-# hello-world
+# 活动报名-H5
 
-## Project setup
+***
+
+# 项目介绍
+
+活动报名
+
+***
+
+# 功能模块
+
+## 审核模块
+只有管理员
+***
+
+# 运行项目
+
+***
+
+## 首先在根目录执行, 安装依赖
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 以开发模式启动
+
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 打包压缩减小体积
+
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### 分析文件
+
 ```
 yarn lint
 ```
 
-### Customize configuration
+### 自定义配置
+
+***
 See [Configuration Reference](https://cli.vuejs.org/config/).
