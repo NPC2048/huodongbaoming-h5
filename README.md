@@ -44,6 +44,11 @@
 
 ***
 
+### 环境
+
+* ide(idea, webstorm, vscode,...)
+* node
+
 ### 安装依赖
 
 ```
@@ -51,6 +56,12 @@ yarn install
 ```
 
 ### 以开发模式启动
+
+vue-cli-service 加启动参数 --mode=环境 可设置环境变量
+
+在项目根目录的 .env.[环境] 文件可编辑环境变量
+
+目前只有 VUE_APP_BASE_URL(后台接口地址) 可设置
 
 ```
 yarn serve
