@@ -18,21 +18,11 @@
 import {ref} from 'vue';
 import {Tabbar, TabbarItem} from 'vant';
 import {useStore} from "vuex";
-import netKit from "@/utils/netKit";
-import {DEFAULT_MENU_LIST} from "@/utils/global";
 
 export default {
   name: "tabbar",
   setup() {
     const store = useStore();
-    netKit.get('/menu/menus').then(menuList => {
-      // 更新到 store
-      if (menuList.length) {
-        store.commit('setMenuList', menuList);
-      } else {
-        store.commit('setMenuList', DEFAULT_MENU_LIST)
-      }
-    })
     return {store, active: ref(0)}
   },
   components: {

@@ -13,7 +13,8 @@
               :finished="state.finished"
               finished-text="没有更多了"
               @load="nextPage"
-              :offset="100"
+              :offset="300"
+              :immediate-check="false"
     >
       <van-cell :title="item.title" v-for="item in state.list" :key="item.id" @click="(e) => activityClick(item, e)">
         <template #title>
@@ -121,7 +122,10 @@ export default {
     pageKit.fetchPage(state, url);
     return {
       state,
-      onSearch: (value) => pageKit.onSearch(state, url, {keyword: value}),
+      onSearch: (value) => {
+        console.log('onsearch:', value);
+        pageKit.onSearch(state, url, {keyword: value})
+      },
       nextPage: () => pageKit.nextPage(state, url, {keyword: state.params.keyword}),
       onUpdateSearch: (value) => pageKit.onUpdateSearch(state, url, {keyword: value}),
       activityClick

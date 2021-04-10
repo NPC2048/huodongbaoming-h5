@@ -1,7 +1,7 @@
 <template>
   <!-- 修改个人信息 -->
   <van-nav-bar title="我发布的活动" left-arrow @click-left="back"/>
-  <van-form ref="form" style="margin-top: 0" @submit="onSubmit" @failed="onFailed">
+  <van-form ref="form" style="margin-top: 0" @submit="onSubmit">
     <!-- 用户名 -->
     <van-field
         required v-model="state.name"
@@ -92,10 +92,6 @@ export default {
       });
     }
 
-    const onFailed = (values) => {
-      console.log(values);
-    }
-
     return {
       state,
       unknownCheck,
@@ -103,7 +99,6 @@ export default {
       womanChecked,
       changeGender,
       onSubmit,
-      onFailed,
       back: () => router.back()
     }
   },

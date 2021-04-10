@@ -1,7 +1,7 @@
 <template>
   <!-- 修改个密码 -->
   <van-nav-bar title="修改密码" left-arrow @click-left="back"/>
-  <van-form ref="form" style="margin-top: 0" @submit="onSubmit" @failed="onFailed">
+  <van-form ref="form" style="margin-top: 0" @submit="onSubmit">
     <!-- 旧密码 -->
     <van-field
         type="password"
